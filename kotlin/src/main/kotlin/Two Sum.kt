@@ -3,9 +3,6 @@ package o.mg
 fun twoSum(nums: IntArray, target: Int): IntArray {
     val res = IntArray(2)
     for (i in nums.withIndex()) {
-        if (i.value > target) {
-            continue
-        }
         for (y in nums.withIndex()) {
             if ((i.value + y.value == target) && (i.index != y.index)) {
                 res[0] = i.index
