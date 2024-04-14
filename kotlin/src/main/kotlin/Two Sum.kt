@@ -1,12 +1,14 @@
 package o.mg
 
 fun twoSum(nums: IntArray, target: Int): IntArray {
-    for (i in nums.indices) {
-        for (j in i + 1..<nums.size) {
-            if (nums[i] + nums[j] == target) {
-                return intArrayOf(i, j)
-            }
+    val valuesPositions = mutableMapOf<Int, Int>()
+    for ((i,v) in nums.withIndex()) {
+        val res = target - v
+        val potentialIndex = valuesPositions[res]
+        potentialIndex?.let {
+            return intArrayOf(potentialIndex, i)
         }
+        valuesPositions[v] = i
     }
     return intArrayOf()
 }
