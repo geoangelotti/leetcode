@@ -6,7 +6,6 @@ class `Two Sum Test` {
     @Test
     fun case1() {
         val result = twoSum(intArrayOf(2, 7, 11, 15), 9)
-        println(result)
         assertEquals(listOf(0, 1), result.toList())
     }
 
