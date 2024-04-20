@@ -1,4 +1,3 @@
-import com.sun.source.tree.Tree
 import o.mg.TreeNode
 import o.mg.sumOfLeftLeaves
 import kotlin.test.Test
