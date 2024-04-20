@@ -1,3 +1,4 @@
+import com.sun.source.tree.Tree
 import o.mg.TreeNode
 import o.mg.sumOfLeftLeaves
 import kotlin.test.Test
@@ -26,5 +27,28 @@ class `Sum of Left Leaves Test` {
         assertEquals(result, 0)
     }
 
-
+    @Test
+    fun case3() {
+        val n1 = TreeNode(1)
+        val l5 = TreeNode(5)
+        n1.left = l5
+        val l1 = TreeNode(1)
+        n1.right = l1
+        val n3 = TreeNode(3)
+        val l6 = TreeNode(6)
+        n3.right = l6
+        val `n-1` = TreeNode(-1)
+        val l8 = TreeNode(8)
+        `n-1`.right = l8
+        val n2 = TreeNode(2)
+        n2.left = n1
+        val n4 = TreeNode(4)
+        n4.left = n3
+        n4.right = `n-1`
+        val n0 = TreeNode(0)
+        n0.left = n2
+        n0.right = n4
+        val result = sumOfLeftLeaves(n0)
+        assertEquals(result, 5)
+    }
 }
