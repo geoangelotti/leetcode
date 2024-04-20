@@ -6,7 +6,7 @@ fun sumOfLeftLeaves(root: TreeNode?): Int {
     stack.addLast(Pair(root, false))
     while (stack.isNotEmpty()) {
         val (node, isLeft) = stack.removeFirst()
-        if (node != null && node.left == null && isLeft) {
+        if (node != null && node.left == null && node.right == null && isLeft) {
             acc += node.`val`
         }
         node?.left?.let { stack.addLast(Pair(it, true)) }
