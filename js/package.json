@@ -1,0 +1,22 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoangelotti/leetcode.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoangelotti/leetcode/issues"
+  },
+  "homepage": "https://github.com/geoangelotti/leetcode#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
