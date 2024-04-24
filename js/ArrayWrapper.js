@@ -13,3 +13,5 @@ ArrayWrapper.prototype.valueOf = function () {};
  * @return {string}
  */
 ArrayWrapper.prototype.toString = function () {};
+
+module.exports = ArrayWrapper;
