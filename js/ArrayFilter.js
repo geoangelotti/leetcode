@@ -4,6 +4,7 @@
  * @return {number[]}
  */
 var filter = function(arr, fn) {
+	return arr.filter(fn);
 };
 
 module.exports = filter;
