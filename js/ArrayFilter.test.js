@@ -15,5 +15,5 @@ test("case 2", () => {
 test("case 3", () => {
 	const arr = [-2,-1,0,1,2];
 	function plusOne(n) { return n + 1 };
-	expect(filter(arr, greaterThan10)).toStrictEqual([20, 30]);
+	expect(filter(arr, plusOne)).toStrictEqual([-2, 0, 1, 2]);
 });
