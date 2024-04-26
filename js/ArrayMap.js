@@ -4,6 +4,7 @@
  * @return {number[]}
  */
 var map = function(arr, fn) {
+	return arr.map(fn);
 };
 
 module.exports = map;
