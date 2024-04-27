@@ -5,6 +5,7 @@
  * @return {number}
  */
 var reduce = function(nums, fn, init) {
+	return nums.reduce(fn, init);
 };
 
 module.exports = reduce;
