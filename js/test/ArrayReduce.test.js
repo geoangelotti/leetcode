@@ -1,4 +1,4 @@
-const reduce = require('./ArrayReduce');
+const reduce = require('../src/ArrayReduce');
 
 test("case 1", () => {
 	const nums = [1, 2, 3, 4];

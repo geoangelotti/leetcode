@@ -1,4 +1,4 @@
-const ArrayWrapper = require('./ArrayWrapper');
+const ArrayWrapper = require('../src/ArrayWrapper');
 
 test("case 1", () => {
 	const obj1 = new ArrayWrapper([1,2]);

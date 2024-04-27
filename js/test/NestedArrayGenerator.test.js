@@ -1,4 +1,4 @@
-const inorderTraversal = require("./NestedArrayGenerator");
+const inorderTraversal = require("../src/NestedArrayGenerator");
 
 test("case 1", () => {
 	const arr = [[[6]], [1, 3], []];

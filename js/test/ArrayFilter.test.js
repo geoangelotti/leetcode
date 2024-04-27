@@ -1,4 +1,4 @@
-const filter = require("./ArrayFilter");
+const filter = require("../src/ArrayFilter");
 
 test("case 1", () => {
 	const arr = [0,10,20,30];
