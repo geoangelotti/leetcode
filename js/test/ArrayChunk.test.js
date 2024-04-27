@@ -1,4 +1,4 @@
-const chunk = require("./ArrayChunk");
+const chunk = require("../src/ArrayChunk");
 
 test("case 1", () => {
 	const arr = [1,2,3,4,5];

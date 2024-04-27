@@ -1,4 +1,4 @@
-const Array = require("./ArrayLast");
+const Array = require("../src/ArrayLast");
 
 test("case 1", () => {
 	const nums = new Array(null, {}, 3);

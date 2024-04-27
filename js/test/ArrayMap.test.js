@@ -1,4 +1,4 @@
-const map = require("./ArrayMap");
+const map = require("../src/ArrayMap");
 
 test("case 1", () => {
 	const arr = [1, 2, 3];
