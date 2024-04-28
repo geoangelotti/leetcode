@@ -1,11 +1,13 @@
 const sleep = require("../src/Sleep");
 
-test("case 1", () => {
-	let t = Date.now();
-	expect(sleep(100).then(() => Date.now() - t)).toStrictEqual(100);
+test("case 1", async () => {
+	const t = Date.now();
+	const input = 100;
+	expect(await sleep(input).then(() => Date.now() - t - input)).toBeLessThanOrEqual(3);
 });
 
-test("case 2", () => {
+test("case 2", async () => {
 	let t = Date.now();
-	expect(sleep(200).then(() => Date.now() - t)).toStrictEqual(200);
+	const input = 200;
+	expect(await sleep(input).then(() => Date.now() - t - input)).toBeLessThanOrEqual(3);
 });
