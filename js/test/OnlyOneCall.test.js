@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const once = require("../src/OnlyOneCall");
 
 test("case 1", () => {

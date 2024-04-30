@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const fibGenerator = require("../src/FibonacciGenerator");
 
 test("case 1", () => {

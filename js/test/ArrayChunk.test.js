@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const chunk = require("../src/ArrayChunk");
 
 test("case 1", () => {

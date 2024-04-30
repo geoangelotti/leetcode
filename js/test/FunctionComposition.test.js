@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const compose = require("../src/FunctionComposition");
 
 test("case 1", () => {

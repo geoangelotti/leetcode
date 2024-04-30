@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const map = require("../src/ArrayMap");
 
 test("case 1", () => {

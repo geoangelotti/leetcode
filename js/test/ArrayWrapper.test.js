@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const ArrayWrapper = require('../src/ArrayWrapper');
 
 test("case 1", () => {

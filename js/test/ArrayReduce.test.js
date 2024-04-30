@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const reduce = require('../src/ArrayReduce');
 
 test("case 1", () => {
