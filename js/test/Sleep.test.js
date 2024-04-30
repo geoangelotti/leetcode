@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const sleep = require("../src/Sleep");
 
 test("case 1", async () => {

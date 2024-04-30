@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const createCounter = require("../src/Counter2");
 
 test("case 1", () => {

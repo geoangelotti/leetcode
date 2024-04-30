@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const Array = require("../src/ArrayLast");
 
 test("case 1", () => {

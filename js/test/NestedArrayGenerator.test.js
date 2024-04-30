@@ -1,3 +1,4 @@
+const { expect, test } = require("@jest/globals");
 const inorderTraversal = require("../src/NestedArrayGenerator");
 
 test("case 1", () => {
@@ -11,6 +12,6 @@ test("case 1", () => {
 test("case 1", () => {
 	const arr = [];
 	const gen = inorderTraversal(arr);
-	expect(gen.next().value).toStrictEqual(undefined);
+	expect(gen.next().value).toBeUndefined();
 });
 
