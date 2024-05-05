@@ -1,4 +1,4 @@
-package src
+package solutions
 
 func HammingWeight(n int) int {
 	var count int
