@@ -6,18 +6,19 @@ class `Valid Anagram Test` {
     @Test
     fun case1() {
         val result = isAnagram("anagram", "nagaram")
-        assertEquals(result, true)
+        assertEquals(true, result)
+
     }
 
     @Test
     fun case2() {
         val result = isAnagram("rat", "car")
-        assertEquals(result, false)
+        assertEquals(false, result)
     }
 
     @Test
     fun case3() {
         val result = isAnagram("a", "aa")
-        assertEquals(result, false)
+        assertEquals(false, result)
     }
 }
