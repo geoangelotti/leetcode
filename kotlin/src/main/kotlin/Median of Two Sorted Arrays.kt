@@ -21,8 +21,7 @@ fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
         merged.add(nums2[j])
         j++
     }
-    if (merged.size % 2 == 0) {
-        return (merged[merged.size / 2].toDouble() + merged[merged.size / 2 - 1].toDouble()) / 2
-    }
-    return merged[merged.size / 2].toDouble()
+    return if (merged.size % 2 == 0) {
+        (merged[merged.size / 2].toDouble() + merged[merged.size / 2 - 1].toDouble()) / 2
+    } else merged[merged.size / 2].toDouble()
 }
