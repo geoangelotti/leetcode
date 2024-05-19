@@ -16,14 +16,14 @@ class `Sum of Left Leaves Test` {
         n3.left = l9
         n3.right = n20
         val result = sumOfLeftLeaves(n3)
-        assertEquals(result, 24)
+        assertEquals(24, result)
     }
 
     @Test
     fun case2() {
         val root = TreeNode(1)
         val result = sumOfLeftLeaves(root)
-        assertEquals(result, 0)
+        assertEquals(0, result)
     }
 
     @Test
@@ -48,6 +48,6 @@ class `Sum of Left Leaves Test` {
         n0.left = n2
         n0.right = n4
         val result = sumOfLeftLeaves(n0)
-        assertEquals(result, 5)
+        assertEquals(5, result)
     }
 }

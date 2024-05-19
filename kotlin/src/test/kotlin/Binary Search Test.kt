@@ -6,12 +6,12 @@ class `Binary Search Test` {
     @Test
     fun case1() {
         val result = search(intArrayOf(-1,0,3,5,9,12), 9)
-        assertEquals(result, 4)
+        assertEquals(4, result)
     }
 
     @Test
     fun case2() {
         val result = search(intArrayOf(-1,0,3,5,9,12), 2)
-        assertEquals(result, -1)
+        assertEquals(-1, result)
     }
 }

@@ -6,12 +6,12 @@ class `Find the Difference Test` {
     @Test
     fun case1(){
         val result = findTheDifference("abcd", "abcde")
-        assertEquals(result, 'e')
+        assertEquals('e', result)
     }
 
     @Test
     fun case2(){
         val result = findTheDifference("", "t")
-        assertEquals(result, 't')
+        assertEquals('t', result)
     }
 }
