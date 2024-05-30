@@ -1,7 +1,17 @@
 package o.mg
 
 fun checkRecord(s: String): Boolean {
-    val absent = s.count { it == 'A' } < 2
-    val late = s.windowed(3).count { it == "LLL" } < 1
-    return absent && late
+    var absent = 0
+    var late = 0
+    s.forEach {
+        when (it) {
+            'P' -> late = 0
+            'L' -> if (++late > 2) return false
+            else -> {
+                if (++absent > 1) return false
+                late = 0
+            }
+        }
+    }
+    return true
 }
