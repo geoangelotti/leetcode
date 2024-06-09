@@ -18,6 +18,6 @@ class `Richest Customer Wealth Test` {
     @Test
     fun case3() {
         val result = maximumWealth(arrayOf(intArrayOf(2, 8, 7), intArrayOf(7, 1, 3), intArrayOf(1, 9, 5)))
-        assertEquals(6, result)
+        assertEquals(17, result)
     }
 }

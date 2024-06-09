@@ -1,5 +1,5 @@
 package o.mg
 
 fun maximumWealth(accounts: Array<IntArray>): Int {
-    TODO()
+    return accounts.map { it.sum() }.max()
 }
