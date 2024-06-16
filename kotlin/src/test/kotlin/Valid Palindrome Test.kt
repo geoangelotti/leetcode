@@ -1,5 +1,6 @@
 import o.mg.isPalindrome
 import kotlin.test.Test
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class `Valid Palindrome Test` {
@@ -12,7 +13,7 @@ class `Valid Palindrome Test` {
     @Test
     fun case2() {
         val result = isPalindrome("race a car")
-        assertTrue { result }
+        assertFalse { result }
     }
 
     @Test
