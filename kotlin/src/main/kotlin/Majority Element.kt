@@ -1,5 +1,6 @@
 package o.mg
 
 fun majorityElement(nums: IntArray): Int {
-    TODO()
+    nums.sort()
+    return nums[nums.size / 2]
 }
