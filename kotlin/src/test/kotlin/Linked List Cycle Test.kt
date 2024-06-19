@@ -15,7 +15,6 @@ class `Linked List Cycle Test` {
         val n4 = ListNode(4)
         n0.next = n4
         n4.next = n2
-        println(n3)
         assertTrue { hasCycle(n3) }
     }
 
