@@ -8,6 +8,7 @@ class ListNode(var `val`: Int) {
             return false
         }
         if (other == null) return true
+        if (this === other) return true
         if (this.`val` == other.`val`) {
             return this.next == other.next
         }
