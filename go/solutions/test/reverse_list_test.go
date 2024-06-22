@@ -1,4 +1,4 @@
-package solutions
+package solutions_test
 
 import (
 	"reflect"
@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Test_reverseList(t *testing.T) {
+func TestReverseList(t *testing.T) {
 	type args struct {
 		head *solutions.ListNode
 	}
@@ -17,13 +17,13 @@ func Test_reverseList(t *testing.T) {
 	}{
 		{
 			name:     "case1",
-			args:     args{head: &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: &solutions.ListNode{Val: 5}}}}}},
-			expected: &solutions.ListNode{Val: 5, Next: &solutions.ListNode{Val: 4, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 1}}}}},
+			args:     args{head: solutions.NewListNode([]int{1, 2, 3, 4, 5})},
+			expected: solutions.NewListNode([]int{5, 4, 3, 2, 1}),
 		},
 		{
 			name:     "case2",
-			args:     args{head: &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2}}},
-			expected: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 1}},
+			args:     args{head: solutions.NewListNode([]int{1, 2})},
+			expected: solutions.NewListNode([]int{2, 1}),
 		},
 		{
 			name:     "case3",
