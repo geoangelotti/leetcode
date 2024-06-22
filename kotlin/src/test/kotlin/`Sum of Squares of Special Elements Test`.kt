@@ -2,7 +2,7 @@ import o.mg.sumOfSquares
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class `Sum of Squares of Special Elements` {
+class `Sum of Squares of Special Elements Test` {
     @Test
     fun case1() {
         val result = sumOfSquares(intArrayOf(1, 2, 3, 4))
