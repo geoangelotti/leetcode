@@ -18,8 +18,8 @@ func TestMergeTwoSortedLists(t *testing.T) {
 	}{
 		{
 			name:     "case1",
-			args:     args{list1: &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 4}}}, list2: &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4}}}},
-			expected: &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: &solutions.ListNode{Val: 4}}}}}},
+			args:     args{list1: solutions.NewListNode([]int{1, 2, 4}), list2: solutions.NewListNode([]int{1, 3, 4})},
+			expected: solutions.NewListNode([]int{1, 1, 2, 3, 4, 4}),
 		},
 		{
 			name:     "case2",
