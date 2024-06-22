@@ -19,4 +19,11 @@ class `Double a Number Represented as a Linked List Test` {
         a2.next = a3
         assertEquals(result, a1)
     }
+
+    @Test
+    fun case2() {
+        val head = ListNode(listOf(9,9,9))
+        val result = doubleIt(head)
+        assertEquals(ListNode(listOf(1,9,9,8)), result)
+    }
 }
