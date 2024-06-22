@@ -39,3 +39,16 @@ func stringBuild(n *ListNode, acc *strings.Builder) {
 	acc.WriteString(fmt.Sprintf("%d, ", n.Val))
 	stringBuild(n.Next, acc)
 }
+
+func NewListNode(nums []int) *ListNode {
+	if len(nums) == 0 {
+		return nil
+	}
+	head := &ListNode{Val: nums[0]}
+	current := head
+	for _, num := range nums[1:] {
+		current.Next = &ListNode{Val: num}
+		current = current.Next
+	}
+	return head
+}
