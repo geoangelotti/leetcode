@@ -1,4 +1,4 @@
-package solutions
+package solutions_test
 
 import (
 	"reflect"
@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Test_reverseList(t *testing.T) {
+func TestReverseList(t *testing.T) {
 	type args struct {
 		head *solutions.ListNode
 	}
