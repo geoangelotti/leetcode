@@ -14,8 +14,12 @@ class ListNode(var `val`: Int) {
         return false
     }
 
-    constructor(list: List<Int>): this(list.first()){
-        val v: ListNode? = list.reversed().fold (null) { acc: ListNode?, i -> val c = ListNode(i); c.next = acc; c }
+    constructor(list: List<Int>) : this(list.first()) {
+        val v: ListNode? = list.reversed().fold(null) { acc: ListNode?, i ->
+            val c = ListNode(i)
+            c.next = acc
+            c
+        }
         this.next = v!!.next
     }
 }

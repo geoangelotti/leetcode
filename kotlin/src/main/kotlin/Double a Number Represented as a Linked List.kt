@@ -14,7 +14,7 @@ fun doubleItRemainder(node: ListNode?): Int {
     if (node != null) {
         val v = node.`val` * 2 + doubleItRemainder(node.next)
         node.`val` = v % 10
-        return v/10
+        return v / 10
     }
     return 0
 }
