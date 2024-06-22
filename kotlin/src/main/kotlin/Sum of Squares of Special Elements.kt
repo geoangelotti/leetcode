@@ -1,5 +1,9 @@
 package o.mg
 
 fun sumOfSquares(nums: IntArray): Int {
-    return nums.withIndex().filter { (i, _) -> (nums.size % (i + 1) == 0) }.sumOf { (_, num) -> num * num }
+    var sum = 0
+    nums.forEachIndexed { i, num ->
+        if (nums.size % (i + 1) == 0) sum += num * num
+    }
+    return sum
 }
