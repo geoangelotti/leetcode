@@ -6,17 +6,17 @@ import kotlin.test.assertEquals
 class `Double a Number Represented as a Linked List Test` {
     @Test
     fun case1() {
-        val n1 = ListNode(1)
-        val n8 = ListNode(8)
-        n1.next = n8
-        var n9 = ListNode(9)
-        n8.next = n9
-        val result = doubleIt(n1)
-        val n3 = ListNode(3)
-        val n7 = ListNode(7)
-        n3.next = n7
-        val nn9 = ListNode(9)
-        n7.next = nn9
-        assertEquals(result, n3)
+        val l1 = ListNode(1)
+        val l2 = ListNode(8)
+        l1.next = l2
+        val l3 = ListNode(9)
+        l2.next = l3
+        val result = doubleIt(l1)
+        val a1 = ListNode(3)
+        val a2 = ListNode(7)
+        a1.next = a2
+        val a3 = ListNode(8)
+        a2.next = a3
+        assertEquals(result, a1)
     }
 }
