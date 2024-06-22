@@ -28,7 +28,7 @@ func TestMergeTwoSortedLists(t *testing.T) {
 		},
 		{
 			name:     "cas3",
-			args:     args{list1: &solutions.ListNode{Val: 0}, list2: &solutions.ListNode{}},
+			args:     args{list1: nil, list2: &solutions.ListNode{Val: 0}},
 			expected: &solutions.ListNode{Val: 0},
 		},
 	}
