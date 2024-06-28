@@ -4,13 +4,13 @@ import kotlin.test.assertEquals
 
 class `Find the Difference Test` {
     @Test
-    fun case1(){
+    fun case1() {
         val result = findTheDifference("abcd", "abcde")
         assertEquals('e', result)
     }
 
     @Test
-    fun case2(){
+    fun case2() {
         val result = findTheDifference("", "t")
         assertEquals('t', result)
     }
