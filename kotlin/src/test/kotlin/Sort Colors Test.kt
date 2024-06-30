@@ -5,13 +5,14 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class `Sort Colors Test` {
     @ParameterizedTest
     @MethodSource("provideTestCases")
     fun testSortColors(input: IntArray, expected: IntArray) {
         sortColors(input)
-        assertEquals(expected, input)
+        assertTrue { input.contentEquals(expected) }
     }
 
     companion object {
