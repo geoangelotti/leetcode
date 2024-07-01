@@ -1,8 +1,14 @@
 package o.mg
 
 fun threeConsecutiveOdds(arr: IntArray): Boolean {
-    for (i in 0..arr.size -3) {
-        if (arr[i] % 2 == 1 && arr[i+1] % 2 == 1 && arr[i+2] % 2 == 1)
+    var consecutive = 0
+    for (num in arr) {
+        if (num % 2 == 1) {
+            consecutive += 1
+        } else {
+            consecutive = 0
+        }
+        if (consecutive == 3)
             return true
     }
     return false
