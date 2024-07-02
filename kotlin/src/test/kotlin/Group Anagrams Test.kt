@@ -1,23 +1,35 @@
 import o.mg.groupAnagrams
-import kotlin.test.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.MethodSource
+import java.util.stream.Stream
 import kotlin.test.assertEquals
 
 class `Group Anagrams Test` {
-    @Test
-    fun case1() {
-        val result = groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat"))
-        assertEquals(listOf(listOf("eat", "tea", "ate"), listOf("tan", "nat"), listOf("bat")), result)
+    @ParameterizedTest
+    @MethodSource("provideTestCases")
+    fun testGroupAnagrams(input: Array<String>, expected: List<List<String>>) {
+        val result = groupAnagrams(input)
+        assertEquals(expected, result)
     }
 
-    @Test
-    fun case2() {
-        val result = groupAnagrams(arrayOf(""))
-        assertEquals(listOf(listOf("")), result)
-    }
-
-    @Test
-    fun case3() {
-        val result = groupAnagrams(arrayOf("a"))
-        assertEquals(listOf(listOf("a")), result)
+    companion object {
+        @JvmStatic
+        fun provideTestCases(): Stream<Arguments> {
+            return Stream.of(
+                Arguments.of(
+                    arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
+                    listOf(listOf("eat", "tea", "ate"), listOf("tan", "nat"), listOf("bat"))
+                ),
+                Arguments.of(
+                    arrayOf(""),
+                    listOf(listOf(""))
+                ),
+                Arguments.of(
+                    arrayOf("a"),
+                    listOf(listOf("a"))
+                ),
+            )
+        }
     }
 }
