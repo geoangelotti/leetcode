@@ -1,52 +1,23 @@
 package o.mg
 
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
-    return addTwoNumbersRemainder(l1,l2,0)
-}
-
-fun addTwoNumbersRemainder(l1: ListNode?, l2: ListNode?, remainder: Int): ListNode? {
-    if (l1 == null && l2 == null) {
-        if (remainder  == 0) {
-            return null
-        }
-        return ListNode(remainder)
+    var parent = ListNode(0)
+    var current = parent
+    var n1 = l1
+    var n2 = l2
+    var carry = 0
+    while (n1 != null || n2 != null) {
+        val v1 = n1?.`val` ?: 0
+        val v2 = n2?.`val` ?: 0
+        val sum = v1 + v2 + carry
+        carry = sum / 10
+        current.next = ListNode(sum % 10)
+        current = current.next!!
+        n1 = n1?.next
+        n2 = n2?.next
     }
-    if (l1 == null) {
-        val sum = remainder + l2!!.`val`
-        if (sum >= 10) {
-          val rem = sum % 10
-          val res = ListNode(rem)
-            res.next = addTwoNumbersRemainder(null, l2.next, 1)
-            return res
-        } else {
-            val res = ListNode(sum)
-            res.next = addTwoNumbersRemainder(null, l2.next, 0)
-            return res
-        }
+    if (carry > 0) {
+        current.next = ListNode(carry)
     }
-    if (l2 == null) {
-        val sum = remainder + l1!!.`val`
-        if (sum >= 10) {
-            val rem = sum % 10
-            val res = ListNode(rem)
-            res.next = addTwoNumbersRemainder(l1.next, null, 1)
-            return res
-        } else {
-            val res = ListNode(sum)
-            res.next = addTwoNumbersRemainder(l1.next, null, 0)
-            return res
-        }
-    }
-    val sum = remainder + l1.`val` + l2.`val`
-    if (sum >= 10) {
-        val rem = sum % 10
-        val res = ListNode(rem)
-        res.next = addTwoNumbersRemainder(l1.next, l2.next, 1)
-        return res
-    } else {
-        val res = ListNode(sum)
-        res.next = addTwoNumbersRemainder(l1.next, l2.next, 0)
-        return res
-    }
-    return null
+    return parent.next
 }
