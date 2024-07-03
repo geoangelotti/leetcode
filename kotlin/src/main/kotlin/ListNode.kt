@@ -13,6 +13,10 @@ class ListNode(var `val`: Int) {
         return nodes.toList()
     }
 
+    override fun toString(): String {
+        return this.toList().joinToString(separator = ",", prefix = "<", postfix = ">")
+    }
+
     override fun equals(other: Any?): Boolean {
         if (other !is ListNode?) {
             return false
