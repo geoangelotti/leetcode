@@ -1,7 +1,7 @@
 package o.mg
 
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
-    var parent = ListNode(0)
+    val parent = ListNode(0)
     var current = parent
     var n1 = l1
     var n2 = l2
