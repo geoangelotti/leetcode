@@ -1,10 +1,16 @@
 package o.mg
 
 fun firstMissingPositive(nums: IntArray): Int {
-    val set = nums.toSet()
-    var num = 1
-    while (num in set) {
-        num += 1
+    val exists = BooleanArray(nums.size + 1)
+    nums.forEach {
+        if (it > 0 && it <= nums.size) {
+            exists[it] = true
+        }
     }
-    return num
+    for (i in 1..nums.size) {
+        if (!exists[i]) {
+            return i
+        }
+    }
+    return nums.size + 1
 }
