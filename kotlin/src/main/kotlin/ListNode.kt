@@ -3,6 +3,20 @@ package o.mg
 class ListNode(var `val`: Int) {
     var next: ListNode? = null
 
+    private fun toList(): List<Int> {
+        var node: ListNode? = this
+        val nodes = mutableListOf<Int>()
+        while (node != null) {
+            nodes.add(node.`val`)
+            node = node.next
+        }
+        return nodes.toList()
+    }
+
+    override fun toString(): String {
+        return this.toList().joinToString(separator = ",", prefix = "<", postfix = ">")
+    }
+
     override fun equals(other: Any?): Boolean {
         if (other !is ListNode?) {
             return false
