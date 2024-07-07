@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 fn num_water_bottles(num_bottles: i32, num_exchange: i32) -> i32 {
-    todo!()
+    num_bottles + (num_bottles - 1) / (num_exchange - 1)
 }
 
 #[cfg(test)]
@@ -10,7 +10,7 @@ mod tests {
 
     #[rstest]
     #[case(9, 3, 13)]
-    #[case(15, 4, 9)]
+    #[case(15, 4, 19)]
     fn test_num_water_bottles(
         #[case] num_bottles: i32,
         #[case] num_exchange: i32,
