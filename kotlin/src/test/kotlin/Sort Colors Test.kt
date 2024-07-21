@@ -1,16 +1,16 @@
 import o.mg.sortColors
-import java.util.stream.Stream
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
-import kotlin.test.assertTrue
+import java.util.stream.Stream
 
 class `Sort Colors Test` {
     @ParameterizedTest
     @MethodSource("provideTestCases")
     fun testSortColors(input: IntArray, expected: IntArray) {
         sortColors(input)
-        assertTrue { input.contentEquals(expected) }
+        assertTrue(input.contentEquals(expected))
     }
 
     companion object {

@@ -1,18 +1,17 @@
 import o.mg.ListNode
 import o.mg.nodesBetweenCriticalPoints
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import java.util.stream.Stream
-import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class `Find the Minimum and Maximum Number of Nodes Between Critical Points Test` {
     @ParameterizedTest
     @MethodSource("provideTestCases")
     fun testNodesBetweenCriticalPoints(input: ListNode?, expected: IntArray) {
         val result = nodesBetweenCriticalPoints(input)
-        assertTrue { expected.contentEquals(result) }
+        assertTrue(expected.contentEquals(result))
     }
 
     companion object {
