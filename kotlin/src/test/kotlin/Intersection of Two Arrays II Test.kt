@@ -1,16 +1,16 @@
 import o.mg.intersectII
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import java.util.stream.Stream
-import kotlin.test.assertTrue
 
 class `Intersection of Two Arrays II Test` {
     @ParameterizedTest
     @MethodSource("provideTestCases")
     fun testIntersectII(nums1: IntArray, nums2: IntArray, expected: IntArray) {
         val result = intersectII(nums1, nums2)
-        assertTrue { expected.contentEquals(result) }
+        assertTrue(expected.contentEquals(result))
     }
 
     companion object {
