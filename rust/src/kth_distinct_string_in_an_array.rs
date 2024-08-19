@@ -1,6 +1,22 @@
 #![allow(dead_code)]
+
+use std::collections::HashMap;
 fn kth_distinct(arr: Vec<String>, k: i32) -> String {
-    todo!()
+    let mut frequencies: HashMap<String, i32> = HashMap::new();
+    for s in arr.iter() {
+        let count = frequencies.entry(s.to_string()).or_insert(0);
+        *count += 1;
+    }
+    let mut c = 0;
+    for s in arr.iter() {
+        if frequencies[s] == 1 && c + 1 == k {
+            return s.clone();
+        }
+        if frequencies[s] == 1 {
+            c += 1;
+        }
+    }
+    "".into()
 }
 
 #[cfg(test)]
