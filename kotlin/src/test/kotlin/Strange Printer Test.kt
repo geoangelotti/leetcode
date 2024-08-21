@@ -18,7 +18,7 @@ class `Strange Printer Test` {
         fun provideTestCases(): Stream<Arguments> {
             return Stream.of(
                 Arguments.of("aaabbb", 2),
-                Arguments.of("aba=", 2),
+                Arguments.of("aba", 2),
             )
         }
     }
