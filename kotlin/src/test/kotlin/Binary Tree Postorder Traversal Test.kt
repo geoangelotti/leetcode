@@ -18,7 +18,7 @@ class `Binary Tree Postorder Traversal Test` {
         @JvmStatic
         fun provideTestCases(): Stream<Arguments> {
             return Stream.of(
-                Arguments.of(case1TreeNode(), listOf(3,2,1)),
+                Arguments.of(case1TreeNode(), listOf(3, 2, 1)),
                 Arguments.of(null, listOf<Int>()),
                 Arguments.of(TreeNode(1), listOf(1)),
             )
