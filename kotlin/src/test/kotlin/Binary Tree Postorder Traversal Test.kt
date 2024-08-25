@@ -24,12 +24,11 @@ class `Binary Tree Postorder Traversal Test` {
             )
         }
 
-        private fun case1TreeNode(): TreeNode? {
+        private fun case1TreeNode(): TreeNode {
             val n2 = TreeNode(2)
             n2.left = TreeNode(3)
             val n1 = TreeNode(1)
             n1.right = n2
-            println(n1)
             return n1
         }
     }
