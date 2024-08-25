@@ -10,7 +10,7 @@ class `Binary Tree Preorder Traversal Test` {
     @ParameterizedTest
     @MethodSource("provideTestCases")
     fun testPreorderTraversal(root: TreeNode?, expected: List<Int>) {
-       val result = preorderTraversal(root)
+        val result = preorderTraversal(root)
         assertEquals(expected, result)
     }
 
@@ -18,7 +18,7 @@ class `Binary Tree Preorder Traversal Test` {
         @JvmStatic
         fun provideTestCases(): Stream<Arguments> {
             return Stream.of(
-                Arguments.of(case1TreeNode(), listOf(1,2,3)),
+                Arguments.of(case1TreeNode(), listOf(1, 2, 3)),
                 Arguments.of(null, listOf<Int>()),
                 Arguments.of(TreeNode(1), listOf(1)),
             )
