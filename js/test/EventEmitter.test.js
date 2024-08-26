@@ -27,6 +27,7 @@ test("case 3", () => {
 test("case 4", () => {
 	const emitter = new EventEmitter();
 	const sub1 = emitter.subscribe("firstEvent", x => x + 1);
+	// eslint-disable-next-line no-unused-vars
 	const sub2 = emitter.subscribe("firstEvent", x => x + 2);
 	expect(sub1.unsubscribe()).toBeUndefined();
 	expect(emitter.emit("firstEvent", [5])).toStrictEqual([7]);

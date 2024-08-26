@@ -34,7 +34,7 @@ class EventEmitter {
 		if (!subscribers) {
 			return results;
 		}
-		for (callback of subscribers) {
+		for (const callback of subscribers) {
 			results.push(callback(...args));
 		};
 		return results;
