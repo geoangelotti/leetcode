@@ -1,5 +1,5 @@
 const test = require("node:test");
-const assert = require("assert/strict");
+const assert = require("node:assert/strict");
 const expect = require("../src/ToBeOrNotToBe");
 
 test("", (t) => {
@@ -7,7 +7,10 @@ test("", (t) => {
 });
 
 test("", (t) => {
-  assert.strictEqual(expect(5).toBe(null), new Error("Not Equal"));
+  assert.throws(() => expect(5).toBe(null), {
+    name: "Error",
+    message: "Not Equal",
+  });
 });
 
 test("", (t) => {
