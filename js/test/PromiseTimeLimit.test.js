@@ -7,6 +7,7 @@ test("case 1", async () => {
 		return n * n;
 	};
 	try {
+		// eslint-disable-next-line no-unused-vars
 		const res = await timeLimit(fn, 50)(5);
 	} catch (error) {
 		expect(error).toBe("Time Limit Exceeded");
@@ -34,6 +35,7 @@ test("case 4", async () => {
 		throw "Error";
 	};
 	try {
+		// eslint-disable-next-line no-unused-vars
 		const res = await timeLimit(fn, 1000)();
 	} catch (error) {
 		expect(error).toBe("Error");
