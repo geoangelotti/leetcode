@@ -19,10 +19,10 @@ test("case 1", () => {
 test("case 2", () => {
 	let callCount = 0;
 	const factorial = (n) => {
-		if  (n <= 1) {
+		if (n <= 1) {
 			callCount += 1;
 			return 1;
-		} else  {
+		} else {
 			return (n * factorial(n - 1));
 		}
 	};
