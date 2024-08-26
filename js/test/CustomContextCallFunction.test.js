@@ -1,4 +1,5 @@
 const { expect, test } = require("@jest/globals");
+// eslint-disable-next-line no-unused-vars
 const Function = require("../src/CustomContextCallFunction");
 
 test("case 1", () => {
