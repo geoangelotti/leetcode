@@ -6,8 +6,8 @@ test("case 1", () => {
 });
 
 test("case 2", () => {
-	class Animal {};
-	class Dog extends Animal {}
+	class Animal { };
+	class Dog extends Animal { }
 	expect(checkIfInstanceOf(new Dog(), Animal)).toBe(true);
 });
 

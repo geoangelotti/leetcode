@@ -10,9 +10,9 @@ var flat = function (arr, n) {
 		const [item, n] = stack.pop();
 
 		if (Array.isArray(item) && n > 0) {
-		stack.push(...item.map(subItem => [subItem, n - 1]));
+			stack.push(...item.map(subItem => [subItem, n - 1]));
 		} else {
-		result.push(item);
+			result.push(item);
 		}
 	}
 	return result.reverse();

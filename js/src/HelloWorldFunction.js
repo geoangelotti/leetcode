@@ -1,9 +1,10 @@
 /**
 * @return {Function}
 */
-var createHelloWorld = function() {
+var createHelloWorld = function () {
 	const message = "Hello World";
-	return function(...args) {
+	// eslint-disable-next-line no-unused-vars
+	return function (...args) {
 		return message;
 	}
 };

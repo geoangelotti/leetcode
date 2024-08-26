@@ -17,6 +17,7 @@ test("case 2", () => {
 
 test("case 3", () => {
 	const nums = [];
+	// eslint-disable-next-line no-unused-vars
 	function sum(accum, curr) { return 0; };
 	const init = 25;
 	expect(reduce(nums, sum, init)).toStrictEqual(25);

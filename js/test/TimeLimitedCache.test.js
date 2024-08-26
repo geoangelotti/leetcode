@@ -1,6 +1,6 @@
 const { expect, test } = require("@jest/globals");
 const TimeLimitedCache = require("../src/TimeLimitedCache");
- 
+
 test("case 1", async () => {
 	const timeLimitedCache = new TimeLimitedCache();
 	expect(timeLimitedCache.set(1, 42, 1000)).toBe(false);

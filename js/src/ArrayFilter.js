@@ -3,7 +3,7 @@
  * @param {Function} fn
  * @return {number[]}
  */
-var filter = function(arr, fn) {
+var filter = function (arr, fn) {
 	return arr.filter(fn);
 };
 

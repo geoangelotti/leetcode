@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/geoangelotti/leetcode#readme",
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
     "jest": "^29.7.0"
   }
 }
