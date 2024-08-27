@@ -1,22 +1,40 @@
 package solutions_test
 
 import (
+	"reflect"
 	"solutions"
 	"testing"
 )
 
 func TestDoubleIt(t *testing.T) {
-	// Test case 1: Input is 189
-	expected := &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 7, Next: &solutions.ListNode{Val: 8, Next: nil}}}
-	actual := solutions.DoubleIt(&solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 8, Next: &solutions.ListNode{Val: 9, Next: nil}}})
-	if !actual.Equals(expected) {
-		t.Errorf("Expected %s, but got %s", expected, actual)
+	type args struct {
+		head *solutions.ListNode
 	}
-
-	// Test case 2: Input is 999
-	expected = &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 8, Next: nil}}}}
-	actual = solutions.DoubleIt(&solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: nil}}})
-	if !actual.Equals(expected) {
-		t.Errorf("Expected %s, but got %s", expected, actual)
+	tests := []struct {
+		name     string
+		args     args
+		expected *solutions.ListNode
+	}{
+		{
+			"case1",
+			args{
+				solutions.NewListNode([]int{1, 8, 9}),
+			},
+			solutions.NewListNode([]int{3, 7, 8}),
+		},
+		{
+			"case2",
+			args{
+				solutions.NewListNode([]int{9, 9, 9}),
+			},
+			solutions.NewListNode([]int{1, 9, 9, 8}),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := solutions.DoubleIt(tt.args.head); !reflect.DeepEqual(got, tt.expected) {
+				t.Errorf("DoubleIt(%v) = %v, want %v", tt.args.head, got, tt.expected)
+			}
+		})
 	}
 }
