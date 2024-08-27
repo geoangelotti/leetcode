@@ -1,27 +1,43 @@
 package solutions_test
 
 import (
-	"math"
+	"reflect"
 	"solutions"
 	"testing"
 )
 
-const float64EqualityThreshold = 1e-9
-
-func almostEqual(a, b float64) bool {
-	return math.Abs(a-b) <= float64EqualityThreshold
-}
-
 func TestFindMedianSortedArrays(t *testing.T) {
-	expected := 2.0
-	actual := solutions.FindMedianSortedArrays([]int{1, 2}, []int{2})
-	if !almostEqual(actual, expected) {
-		t.Errorf("Expected %f, but got %f", expected, actual)
+	type args struct {
+		nums1 []int
+		nums2 []int
 	}
-
-	expected = 2.5
-	actual = solutions.FindMedianSortedArrays([]int{1, 2}, []int{3, 4})
-	if !almostEqual(actual, expected) {
-		t.Errorf("Expected %f, but got %f", expected, actual)
+	tests := []struct {
+		name     string
+		args     args
+		expected float64
+	}{
+		{
+			"case1",
+			args{
+				[]int{1, 2},
+				[]int{2},
+			},
+			2.0,
+		},
+		{
+			"case2",
+			args{
+				[]int{1, 2},
+				[]int{3, 4},
+			},
+			2.5,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := solutions.FindMedianSortedArrays(tt.args.nums1, tt.args.nums2); !reflect.DeepEqual(got, tt.expected) {
+				t.Errorf("ReverseList(%v, %v) = %v, want %v", tt.args.nums1, tt.args.nums2, got, tt.expected)
+			}
+		})
 	}
 }
