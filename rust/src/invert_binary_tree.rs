@@ -1,9 +1,17 @@
+#![allow(dead_code)]
+
 use std::cell::RefCell;
 use std::rc::Rc;
 
 use crate::tree_node::TreeNode;
 fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
-    todo!()
+    root.map(|node| {
+        let node = node.borrow();
+        let mut new = TreeNode::new(node.val);
+        new.left = invert_tree(node.right.clone());
+        new.right = invert_tree(node.left.clone());
+        Rc::new(RefCell::new(new))
+    })
 }
 
 #[cfg(test)]
