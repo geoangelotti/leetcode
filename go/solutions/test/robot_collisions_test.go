@@ -48,7 +48,7 @@ func TestSurvivedRobotsHealths(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := solutions.SurvivedRobotsHealths(tt.args.positions, tt.args.healths, tt.args.directions); !reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("reverseList() = %v, want %v", got, tt.expected)
+				t.Errorf("SurvivedRobotsHealths(%v, %v, %v) = %v, want %v", tt.args.positions, tt.args.healths, tt.args.directions, got, tt.expected)
 			}
 		})
 	}

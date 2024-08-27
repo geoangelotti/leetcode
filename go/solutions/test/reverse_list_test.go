@@ -34,7 +34,7 @@ func TestReverseList(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := solutions.ReverseList(tt.args.head); !reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("reverseList() = %v, want %v", got, tt.expected)
+				t.Errorf("ReverseList(%v) = %v, want %v", tt.args.head, got, tt.expected)
 			}
 		})
 	}

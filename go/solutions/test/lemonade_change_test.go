@@ -33,7 +33,7 @@ func TestLemonadeChange(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := solutions.LemonadeChange(tt.args.bills); !reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("reverseList() = %v, want %v", got, tt.expected)
+				t.Errorf("LemonadeChange(%v) = %v, want %v", tt.args.bills, got, tt.expected)
 			}
 		})
 	}

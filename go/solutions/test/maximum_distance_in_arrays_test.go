@@ -40,7 +40,7 @@ func TestMaxDistance(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := solutions.MaxDistance(tt.args.arrays); !reflect.DeepEqual(got, tt.expected) {
-				t.Errorf("reverseList() = %v, want %v", got, tt.expected)
+				t.Errorf("MaxDistance(%v) = %v, want %v", tt.args.arrays, got, tt.expected)
 			}
 		})
 	}
