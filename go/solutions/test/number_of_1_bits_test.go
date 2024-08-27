@@ -1,29 +1,41 @@
 package solutions_test
 
 import (
+	"reflect"
 	"solutions"
 	"testing"
 )
 
 func TestHammingWeight(t *testing.T) {
-	// Test case 1: Input is 1011
-	expected := 3
-	actual := solutions.HammingWeight(11)
-	if actual != expected {
-		t.Errorf("Expected %d, but got %d", expected, actual)
+	type args struct {
+		n int
 	}
-
-	// Test case 2: Input is 10000000
-	expected = 1
-	actual = solutions.HammingWeight(128)
-	if actual != expected {
-		t.Errorf("Expected %d, but got %d", expected, actual)
+	tests := []struct {
+		name     string
+		args     args
+		expected int
+	}{
+		{
+			"case1",
+			args{11},
+			3,
+		},
+		{
+			"case2",
+			args{128},
+			1,
+		},
+		{
+			"case3",
+			args{2147483645},
+			30,
+		},
 	}
-
-	// Test case 3: Input is 1111111111111111111111111111101
-	expected = 30
-	actual = solutions.HammingWeight(2147483645)
-	if actual != expected {
-		t.Errorf("Expected %d, but got %d", expected, actual)
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := solutions.HammingWeight(tt.args.n); !reflect.DeepEqual(got, tt.expected) {
+				t.Errorf("HammingWeight(%v) = %v, want %v", tt.args.n, got, tt.expected)
+			}
+		})
 	}
 }
