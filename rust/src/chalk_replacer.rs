@@ -1,13 +1,15 @@
 #![allow(dead_code)]
 
 fn chalk_replacer(chalk: Vec<i32>, k: i32) -> i32 {
-    let mut acc = k;
-    for (i, uses) in chalk.iter().cycle().enumerate() {
-        if acc - *uses < 0 {
-            return (i % chalk.len()) as i32;
+    let chalk_needed: i64 = chalk.iter().map(|&x| x as i64).sum();
+    let mut remaining_chalk = (k as i64 % chalk_needed) as i32;
+    for (i, &uses) in chalk.iter().enumerate() {
+        if remaining_chalk < uses {
+            return i as i32;
         }
-        acc -= uses
+        remaining_chalk -= uses;
     }
+
     0
 }
 
