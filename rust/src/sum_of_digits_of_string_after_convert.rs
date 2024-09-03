@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 fn get_lucky(s: String, k: i32) -> i32 {
     let mut s = s
         .chars()
@@ -11,7 +12,7 @@ fn get_lucky(s: String, k: i32) -> i32 {
             .sum::<i32>()
             .to_string();
     }
-    return s.parse::<i32>().unwrap();
+    s.parse::<i32>().unwrap()
 }
 
 #[cfg(test)]
