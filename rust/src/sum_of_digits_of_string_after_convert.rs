@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+
 fn get_lucky(s: String, k: i32) -> i32 {
     let mut s = s
         .chars()
