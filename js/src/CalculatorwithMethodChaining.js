@@ -1,43 +1,66 @@
 class Calculator {
+  val;
   /**
    * @param {number} value
    */
-  constructor(value) {}
+  constructor(value) {
+    this.val = value;
+  }
 
   /**
    * @param {number} value
    * @return {Calculator}
    */
-  add(value) {}
+  add(value) {
+    this.val += value;
+    return this;
+  }
 
   /**
    * @param {number} value
    * @return {Calculator}
    */
-  subtract(value) {}
+  subtract(value) {
+    this.val -= value;
+    return this;
+  }
 
   /**
    * @param {number} value
    * @return {Calculator}
    */
-  multiply(value) {}
+  multiply(value) {
+    this.val *= value;
+    return this;
+  }
 
   /**
    * @param {number} value
    * @return {Calculator}
    */
-  divide(value) {}
+  divide(value) {
+    if (value === 0) {
+      throw new Error("Division by zero is not allowed");
+    }
+    this.val /= value;
+    return this;
+  }
 
   /**
    * @param {number} value
    * @return {Calculator}
    */
-  power(value) {}
+  power(value) {
+    this.val **= value;
+    return this;
+  }
 
   /**
    * @return {number}
    */
-  getResult() {}
+  getResult() {
+    return this.val;
+  }
 }
 
 module.exports = Calculator;
