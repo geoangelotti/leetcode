@@ -17,7 +17,7 @@ func TestMinimumCost(t *testing.T) {
 	tests := []struct {
 		name     string
 		args     args
-		expected int
+		expected int64
 	}{
 		{
 			"case1",
@@ -31,7 +31,7 @@ func TestMinimumCost(t *testing.T) {
 			28,
 		},
 		{
-			"case1",
+			"case2",
 			args{
 				"aaaa",
 				"bbbb",
@@ -42,7 +42,7 @@ func TestMinimumCost(t *testing.T) {
 			12,
 		},
 		{
-			"case1",
+			"case3",
 			args{
 				"abcd",
 				"abce",
