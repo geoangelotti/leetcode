@@ -1,3 +1,2 @@
-def addDigits(num: Int): Int = {
-  throw Exception("Not implemented")
-}
+def addDigits(num: Int): Int =
+  (num - 1) % 9 + 1
