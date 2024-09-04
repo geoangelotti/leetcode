@@ -35,7 +35,7 @@ func TestSecondMinimum(t *testing.T) {
 			13,
 		},
 		{
-			"case1",
+			"case2",
 			args{
 				2,
 				[][]int{
