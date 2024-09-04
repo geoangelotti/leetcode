@@ -8,6 +8,6 @@ test("Return Length of Arguments Passed", async (t) => {
 	});
 
 	await t.test("Three", () => {
-		assert.strictEqual(argumentsLength([{}, null, "3"]), 3);
+		assert.strictEqual(argumentsLength({}, null, "3"), 3);
 	});
 });
