@@ -1,5 +1,6 @@
 mod chalk_replacer;
 mod construct_2d_array;
+mod count_integers_with_even_digit_sum;
 mod invert_binary_tree;
 mod kth_distinct_string_in_an_array;
 mod num_water_bottles;
