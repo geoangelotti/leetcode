@@ -27,7 +27,7 @@ class `Step-By-Step Directions From a Binary Tree Node to Another Test` {
             val n1 = TreeNode(1)
             n1.left = TreeNode(3)
             val n2 = TreeNode(2)
-            n2.left = TreeNode(5)
+            n2.left = TreeNode(6)
             n2.right = TreeNode(4)
             val n5 = TreeNode(5)
             n5.left = n1
