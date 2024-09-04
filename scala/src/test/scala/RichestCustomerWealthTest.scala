@@ -15,15 +15,15 @@ class RichestCustomerWealthTest extends AnyFlatSpec with TableDrivenPropertyChec
         Array(7, 3),
         Array(3, 5)
       ), 10)
-    ,
-    (Array(
-      Array(2, 8, 7),
-      Array(7, 1, 3),
-      Array(1, 9, 5)
-    ), 17)
+      ,
+      (Array(
+        Array(2, 8, 7),
+        Array(7, 1, 3),
+        Array(1, 9, 5)
+      ), 17)
     )
 
-    forAll(testData) { (input: Array[Array[Int]],expected: Int) =>
+    forAll(testData) { (input: Array[Array[Int]], expected: Int) =>
       val result = maximumWealth(input)
       result should be(expected)
     }
