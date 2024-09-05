@@ -2,8 +2,8 @@ import test from "node:test";
 import { strict as assert } from "node:assert";
 import maxProbability from "../src/PathwithMaximumProbability.mjs";
 
-test("To Be Or Not To Be", async (t) => {
-  await t.test("Connected graph", () => {
+test("Path with Maximum Probability", async (t) => {
+  await t.test("Connected graph 1", () => {
     assert.strictEqual(
       maxProbability(
         3,
@@ -19,7 +19,7 @@ test("To Be Or Not To Be", async (t) => {
       0.25
     );
   });
-  await t.test("Connected graph", () => {
+  await t.test("Connected graph 2", () => {
     assert.strictEqual(
       maxProbability(
         3,
