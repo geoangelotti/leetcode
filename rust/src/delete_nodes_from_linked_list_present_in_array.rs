@@ -1,7 +1,21 @@
 use crate::list_node::ListNode;
+use std::collections::HashSet;
 
 fn modified_list(nums: Vec<i32>, head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-    todo!()
+    let set: HashSet<_> = nums.into_iter().collect();
+    let mut father = ListNode {
+        val: 42,
+        next: head,
+    };
+    let mut curr = &mut father;
+    while let Some(next_box) = curr.next.as_mut() {
+        if set.contains(&next_box.val) {
+            curr.next = next_box.next.take()
+        } else {
+            curr = curr.next.as_mut().unwrap()
+        }
+    }
+    father.next
 }
 
 #[cfg(test)]
