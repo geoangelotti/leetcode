@@ -12,3 +12,6 @@ all: test
 test: $(TEST_FILES)
 	$(CC) $(CFLAGS) -o test_richest_customer_wealth.out $(TEST_DIR)/test_richest_customer_wealth.cpp
 	./test_richest_customer_wealth.out
+
+clean:
+	rm -rfv *.out
