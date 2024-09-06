@@ -3,6 +3,7 @@ mod construct_2d_array;
 mod count_integers_with_even_digit_sum;
 mod invert_binary_tree;
 mod kth_distinct_string_in_an_array;
+mod list_node;
 mod richest_customer_wealth;
 mod sum_of_digits_of_string_after_convert;
 mod tree_node;
