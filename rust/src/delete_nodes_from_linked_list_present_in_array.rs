@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use crate::list_node::ListNode;
 use std::collections::HashSet;
 
