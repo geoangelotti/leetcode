@@ -19,7 +19,7 @@ class `Check if the Sentence Is Pangram Test` {
             return Stream.of(
                 Arguments.of("thequickbrownfoxjumpsoverthelazydog", true),
                 Arguments.of("leetcode", false),
-                )
+            )
         }
     }
 }
