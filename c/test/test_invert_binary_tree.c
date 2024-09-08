@@ -22,7 +22,21 @@ void test_invert_binary_tree1()
 	expected->right->left = create_treenode(3);
 	expected->right->right = create_treenode(1);
 	assert(treenodes_equal(result, expected) == 1);
-	free(root);
+	free(result);
+	free(expected);
+	printf("Test case passed!\n");
+}
+
+void test_invert_binary_tree2()
+{
+	struct TreeNode *root = create_treenode(2);
+	root->left = create_treenode(1);
+	root->right = create_treenode(3);
+	struct TreeNode *result = invertTree(root);
+	struct TreeNode *expected = create_treenode(2);
+	expected->left = create_treenode(3);
+	expected->right = create_treenode(1);
+	assert(treenodes_equal(result, expected) == 1);
 	free(result);
 	free(expected);
 	printf("Test case passed!\n");
@@ -31,5 +45,6 @@ void test_invert_binary_tree1()
 int main()
 {
 	test_invert_binary_tree1();
+	test_invert_binary_tree2();
 	return 0;
 }
