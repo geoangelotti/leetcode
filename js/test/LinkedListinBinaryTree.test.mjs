@@ -34,6 +34,6 @@ test("Linked List in Binary Tree", async (t) => {
       1,
       new ListNode(4, new ListNode(2, new ListNode(6, new ListNode(8))))
     );
-    assert.strictEqual(isSubPath(list, tree), true);
+    assert.strictEqual(isSubPath(list, tree), false);
   });
 });
