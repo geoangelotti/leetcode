@@ -18,7 +18,7 @@ class `House Robber Test` {
         fun provideTestCases(): Stream<Arguments> {
             return Stream.of(
                 Arguments.of(intArrayOf(1,2,3,1), 4),
-                Arguments.of(intArrayOf(2,7,9,3,1), 2),
+                Arguments.of(intArrayOf(2,7,9,3,1), 12),
             )
         }
     }
