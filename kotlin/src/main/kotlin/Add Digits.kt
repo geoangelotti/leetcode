@@ -1,5 +1,9 @@
 package o.mg
 
 fun addDigits(num: Int): Int {
-    TODO()
+    var n = num
+    while (n > 9) {
+        n = n.toString().sumOf { it.digitToInt() }
+    }
+    return n
 }
