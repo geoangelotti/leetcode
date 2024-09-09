@@ -2,4 +2,8 @@ from typing import List
 
 
 def findDuplicate(nums: List[int]) -> int:
-    pass
+    seen = set()
+    for i in nums:
+        if i in seen:
+            return i
+        seen.add(i)
