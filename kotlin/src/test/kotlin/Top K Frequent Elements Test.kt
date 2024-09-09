@@ -17,10 +17,10 @@ class `Top K Frequent Elements Test` {
         @JvmStatic
         fun provideTestCases(): Stream<Arguments> {
             return Stream.of(
-                Arguments.of(intArrayOf(1,1,1,2,2,3), 2, intArrayOf(1,2)),
+                Arguments.of(intArrayOf(1, 1, 1, 2, 2, 3), 2, intArrayOf(1, 2)),
                 Arguments.of(intArrayOf(1), 1, intArrayOf(1)),
 
-            )
+                )
         }
     }
 }
