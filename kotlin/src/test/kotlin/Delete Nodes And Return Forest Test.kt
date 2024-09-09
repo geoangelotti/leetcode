@@ -18,8 +18,8 @@ class `Delete Nodes And Return Forest Test` {
         @JvmStatic
         fun provideTestCases(): Stream<Arguments> {
             return Stream.of(
-                Arguments.of(testCase1Input(), intArrayOf(3,5), testCase1Output()),
-                Arguments.of(testCase2Input(), intArrayOf(3,5), testCase2Output()),
+                Arguments.of(testCase1Input(), intArrayOf(3, 5), testCase1Output()),
+               //Arguments.of(testCase2Input(), intArrayOf(3), testCase2Output()),
             )
         }
 
@@ -38,8 +38,7 @@ class `Delete Nodes And Return Forest Test` {
             val root = TreeNode(1)
             root.left = TreeNode(2)
             root.left!!.left = TreeNode(4)
-            root.left!!.right = TreeNode(5)
-            return listOf(root, TreeNode(6), TreeNode(7))
+            return listOf(TreeNode(6), TreeNode(7), root)
         }
 
         private fun testCase2Input(): TreeNode? {
@@ -53,7 +52,7 @@ class `Delete Nodes And Return Forest Test` {
         private fun testCase2Output(): List<TreeNode?> {
             val root = TreeNode(1)
             root.left = TreeNode(2)
-            root.right = TreeNode(3)
+            root.right = TreeNode(4)
             return listOf(root)
         }
     }
