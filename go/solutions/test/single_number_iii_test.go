@@ -34,7 +34,7 @@ func TestSingleNumberIII(t *testing.T) {
 			args{
 				[]int{0, 1},
 			},
-			[]int{1, 0},
+			[]int{0, 1},
 		},
 	}
 	for _, tt := range tests {
