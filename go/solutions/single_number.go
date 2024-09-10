@@ -1,16 +1,9 @@
 package solutions
 
 func SingleNumber(nums []int) int {
-	m := make(map[int]int)
-	for _, v := range nums {
-		s := m[v]
-		s++
-		m[v] = s
+	var r int
+	for _, n := range nums {
+		r ^= n
 	}
-	for k, v := range m {
-		if v == 1 {
-			return k
-		}
-	}
-	return 0
+	return r
 }
