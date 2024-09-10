@@ -1,5 +1,5 @@
 package o.mg
 
 fun addBinary(a: String, b: String): String {
-    TODO()
+    return (a.toBigInteger(2) + b.toBigInteger(2)).toString(2)
 }
