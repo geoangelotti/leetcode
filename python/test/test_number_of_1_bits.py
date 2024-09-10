@@ -7,5 +7,5 @@ from src.number_of_1_bits import hammingWeight
     (128, 1),
     (2147483645, 30)
 ])
-def testMissingNumber(input: int, expected: int):
+def testHammingWeight(input: int, expected: int):
     assert hammingWeight(input) == expected
