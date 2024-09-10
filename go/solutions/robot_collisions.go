@@ -20,7 +20,7 @@ func SurvivedRobotsHealths(positions []int, healths []int, directions string) []
 		for i-1 >= 0 && stack[i][1] == -1 && stack[i-1][1] == 1 {
 			right := stack[i-1]
 			left := stack[i]
-			survive := []int{}
+			var survive []int
 			stack = stack[:i-1]
 			if left[0] > right[0] {
 				survive = left
