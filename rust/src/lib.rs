@@ -1,4 +1,5 @@
 mod chalk_replacer;
+mod climbing_stairs;
 mod construct_2d_array;
 mod count_integers_with_even_digit_sum;
 mod delete_nodes_from_linked_list_present_in_array;
