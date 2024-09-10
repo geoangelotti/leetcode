@@ -1,5 +1,5 @@
 package o.mg
 
 fun lengthOfLastWord(s: String): Int {
-    TODO()
+    return s.split(" ").filter{ !it.isEmpty() && !it.isBlank() }.last().length
 }
