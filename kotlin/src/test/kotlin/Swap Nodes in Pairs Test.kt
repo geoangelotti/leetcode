@@ -21,7 +21,7 @@ class `Swap Nodes in Pairs Test` {
                 Arguments.of(ListNode(listOf(1, 2, 3, 4)), ListNode(listOf(2, 1, 4, 3))),
                 Arguments.of(null, null),
                 Arguments.of(ListNode(1), ListNode(1)),
-                Arguments.of(ListNode(listOf(1, 2, 3, 4)), ListNode(listOf(2, 1, 3))),
+                Arguments.of(ListNode(listOf(1, 2, 3)), ListNode(listOf(2, 1, 3))),
             )
         }
     }
