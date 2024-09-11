@@ -1,5 +1,5 @@
 #![allow(dead_code)]
-pub fn nth_ugly_number(n: i32) -> i32 {
+fn nth_ugly_number(n: i32) -> i32 {
     NUMS[n as usize - 1]
 }
 
