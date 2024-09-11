@@ -12,7 +12,9 @@ all: test
 
 test: $(TEST_FILES) $(SRC_DIR)/treenode.o
 	$(CC) $(CFLAGS) --std=$(C_STD) -o test_invert_binary_tree.out $(TEST_DIR)/test_invert_binary_tree.c $(SRC_DIR)/treenode.o
+	$(CC) $(CFLAGS) --std=$(C_STD) -o test_convert_sorted_array_to_binary_search_tree.out $(TEST_DIR)/test_convert_sorted_array_to_binary_search_tree.c $(SRC_DIR)/treenode.o
 	./test_invert_binary_tree.out
+	./test_convert_sorted_array_to_binary_search_tree.out
 
 clean:
 	rm -f *.out
