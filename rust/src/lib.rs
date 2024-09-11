@@ -6,6 +6,7 @@ mod delete_nodes_from_linked_list_present_in_array;
 mod invert_binary_tree;
 mod kth_distinct_string_in_an_array;
 mod list_node;
+mod palindrome_number;
 mod richest_customer_wealth;
 mod sum_of_digits_of_string_after_convert;
 mod tree_node;
