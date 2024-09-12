@@ -10,6 +10,7 @@ mod list_node;
 mod palindrome_number;
 mod richest_customer_wealth;
 mod sum_of_digits_of_string_after_convert;
+mod swap_nodes_in_pairs;
 mod tree_node;
 mod ugly_number_2;
 mod water_bottles;
