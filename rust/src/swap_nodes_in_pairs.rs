@@ -1,7 +1,20 @@
+#![allow(dead_code)]
+
 use crate::list_node::ListNode;
 
-pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-    todo!()
+fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    match head {
+        None => None,
+        Some(mut head) => {
+            if let Some(mut next) = head.next.clone() {
+                head.next = swap_pairs(next.next);
+                next.next = Some(head);
+                Some(next)
+            } else {
+                Some(head)
+            }
+        }
+    }
 }
 
 #[cfg(test)]
