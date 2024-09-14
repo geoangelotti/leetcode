@@ -1,6 +1,6 @@
-const test = require("node:test");
-const assert = require("node:assert/strict");
-const expect = require("../src/ToBeOrNotToBe");
+import test from "node:test";
+import { strict as assert } from "node:assert";
+import expect from "../src/ToBeOrNotToBe.mjs";
 
 test("To Be Or Not To Be", async (t) => {
   await t.test("To Be true", () => {
