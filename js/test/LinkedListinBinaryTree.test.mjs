@@ -17,7 +17,6 @@ test("Linked List in Binary Tree", async (t) => {
       )
     )
   );
-  console.log(tree);
   await t.test("SubPath 3", () => {
     const list = new ListNode(4, new ListNode(2, new ListNode(8)));
     assert.strictEqual(isSubPath(list, tree), true);
