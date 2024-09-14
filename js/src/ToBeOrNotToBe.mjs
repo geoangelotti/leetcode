@@ -19,4 +19,4 @@ var expect = function(val) {
     };
 };
 
-module.exports = expect;
+export default expect;

@@ -1,6 +1,6 @@
-const test = require("node:test");
-const assert = require("node:assert/strict");
-const argumentsLength = require("../src/LengthofArgumentsPassed");
+import test from "node:test";
+import { strict as assert } from "node:assert";
+import argumentsLength from "../src/LengthofArgumentsPassed.mjs";
 
 test("Return Length of Arguments Passed", async (t) => {
 	await t.test("One", () => {

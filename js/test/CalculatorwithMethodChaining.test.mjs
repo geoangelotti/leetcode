@@ -1,6 +1,6 @@
-const test = require("node:test");
-const assert = require("node:assert/strict");
-const Calculator = require("../src/CalculatorwithMethodChaining");
+import test from "node:test";
+import { strict as assert } from "node:assert";
+import Calculator from "../src/CalculatorwithMethodChaining.mjs";
 
 test("Calculator with Method Chaining", async (t) => {
   await t.test("add", () => {
