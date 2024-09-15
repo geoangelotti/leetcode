@@ -10,8 +10,8 @@ class HappyNumberTest extends AnyFlatSpec with TableDrivenPropertyChecks with Ma
       (2, false)
     )
 
-    forAll(testData) { (actual: Int, expected: Boolean) =>
-      val result = isHappy(actual)
+    forAll(testData) { (num: Int, expected: Boolean) =>
+      val result = isHappy(num)
       result should be(expected)
     }
   }
