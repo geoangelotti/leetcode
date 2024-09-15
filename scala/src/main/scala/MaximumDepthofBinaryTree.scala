@@ -1,3 +1,6 @@
 def maxDepth(root: TreeNode): Int = {
-  throw new Exception("Not implemented")
+  Option(root) match {
+    case None => 0
+    case Some(n) => 1 + scala.math.max(maxDepth(n.left), maxDepth(n.right))
+  }
 }
