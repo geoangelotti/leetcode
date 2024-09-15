@@ -10,8 +10,8 @@ class AddDigitsTest extends AnyFlatSpec with TableDrivenPropertyChecks with Matc
       (0,0)
     )
 
-    forAll(testData) { (actual: Int, expected: Int) =>
-      val result = addDigits(actual)
+    forAll(testData) { (digits: Int, expected: Int) =>
+      val result = addDigits(digits)
       result should be(expected)
     }
   }
