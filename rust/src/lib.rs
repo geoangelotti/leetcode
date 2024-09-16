@@ -8,6 +8,7 @@ mod find_the_longest_substring_containing_vowels_in_even_counts;
 mod invert_binary_tree;
 mod kth_distinct_string_in_an_array;
 mod list_node;
+mod minimum_time_difference;
 mod palindrome_number;
 mod richest_customer_wealth;
 mod sum_of_digits_of_string_after_convert;

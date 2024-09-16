@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 fn find_the_longest_substring(s: String) -> i32 {
     let vowels = [b'a', b'e', b'i', b'o', b'u'];
     let mut prv = [i32::MAX; 1 << 5];
