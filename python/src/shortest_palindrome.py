@@ -1,17 +1,5 @@
 def shortestPalindrome(s: str) -> str:
-    prefix = 0
-    suffix = 0
-    base = 29
-    last_index = 0
-    power = 1
-    mod = 10**9+7
-    for i, c in enumerate(s):
-        char = (ord(c) - ord('a') + 1)
-        prefix = (prefix*base) % mod
-        prefix = (prefix+char) % mod
-        suffix = (suffix + char * power)
-        power = (power*base) % mod
-        if prefix == suffix:
-            last_index = i
-    suffix = s[last_index+1:]
-    return suffix[::-1] + s
+    r = s[::-1]
+    for i in range(len(s) + 1):
+        if s.startswith(r[i:]):
+            return r[:i] + s
